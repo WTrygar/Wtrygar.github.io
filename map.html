@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
-    <head>
+   <head>
         <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>    </head>
+        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    </head>
     <body>
         <div id = "map" style = "width: 900px; height: 580px"></div>
         <script>
@@ -13,7 +14,7 @@
            }
            
            // Creating a map object
-           var map = new L.map('map', mapOptions);
+           var map = new L.map('map', mapOptions).locate({setView: true, maxZoom: 16});
            
            // Creating a Layer object
            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png');
